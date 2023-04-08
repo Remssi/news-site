@@ -1,0 +1,9 @@
+<ul class="list-group">
+    <h3>Comments ({{ article.comment_set.all.count }})</h3>
+    {% for comment in article.comment_set.all|dictsortreversed:"created"  %}
+    <li class="list-group-item border-0 d-flex justify-content-between">
+        <p>{{ comment }}</p>
+        <p class="text-muted">{{ comment.created|date:"d.m.Y - H:i" }}</p>
+    </li>
+    {% endfor %}
+</ul>

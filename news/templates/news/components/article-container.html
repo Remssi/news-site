@@ -1,0 +1,11 @@
+<div class="container">
+    {% for article in latest_articles_list %}
+        {% if forloop.counter0|divisibleby:3 %}<div class="row gy-3 {% if not forloop.first %}mt-1{% endif %}">{% endif %}
+
+        <div class="col-auto">
+            {% include 'news/components/article-card.html' %}
+        </div>
+        
+        {% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
+    {% endfor %}
+</div>

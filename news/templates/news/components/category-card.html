@@ -1,0 +1,7 @@
+<div class="card">
+    <h2 class="card-header">{{ category }}</h2>
+    <div class="card-body">
+        <p class="card-text text-muted">Articles: {{ category.newsarticle_set.all.count }}</p>
+    </div>
+  <a class="stretched-link" href="{% url 'news:category' category.id %}"></a>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+    {% for author in authors_list %}
+        {% if forloop.counter0|divisibleby:3 %}<div class="row gy-3 {% if not forloop.first %}mt-1{% endif %}">{% endif %}
+
+        <div class="col-auto">
+            {% include 'news/components/author-card.html' %}
+        </div>
+        
+        {% if forloop.counter|divisibleby:3 or forloop.last %}</div>{% endif %}
+    {% endfor %}
+</div>

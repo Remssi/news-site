@@ -1,0 +1,9 @@
+<form action="{% url 'news:comment' article.id %}" method="post">
+    <div class="form-group mb-2">
+        {% csrf_token %}
+        <label for="comment-input">Add a comment</label>
+        {% if comment_error %}<p style="color: red"><strong>{{ comment_error }}</strong></p>{% endif %}
+        <input class="form-control" type="text" name="comment-text" id="comment-input" />
+    </div>
+    <button class="btn" style="color: white; background-color: #527d3e" type="submit">Send</button>
+</form>

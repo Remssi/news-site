@@ -1,0 +1,7 @@
+<div class="card">
+    <h2 class="card-header">{{ author }}</h2>
+    <div class="card-body">
+        <p class="card-text text-muted">Articles: {{ author.newsarticle_set.all.count }}</p>
+    </div>
+  <a class="stretched-link" href="{% url 'news:author' author.id %}"></a>
+</div>

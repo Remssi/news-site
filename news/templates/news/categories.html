@@ -1,0 +1,10 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+  <div class="container mt-3 mb-5">
+    <h1 class="mb-5">Select a category</h1>
+    {% if categories_list %}
+      {% include 'news/components/category-container.html'  %}
+    {% endif %}
+  </div>
+{% endblock %}

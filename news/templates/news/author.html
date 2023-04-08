@@ -1,0 +1,12 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+  <div class="container mt-3 mb-5">
+    <h1 class="mb-5">Articles by {{ author }}</h1>
+    {% with author.newsarticle_set.all|dictsortreversed:"published" as latest_articles_list  %}
+    {% if latest_articles_list %}
+    {% include 'news/components/article-container.html'  %}
+    {% endif %}
+    {% endwith %}
+  </div>
+{% endblock %}

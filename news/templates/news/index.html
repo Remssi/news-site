@@ -1,0 +1,10 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+  <div class="container mt-3 mb-5">
+    <h1 class="mb-5">Browse through the newest articles!</h1>
+    {% if latest_articles_list %}
+      {% include 'news/components/article-container.html'  %}
+    {% endif %}
+  </div>
+{% endblock %}

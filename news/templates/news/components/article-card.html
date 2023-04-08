@@ -1,0 +1,10 @@
+<div class="card">
+    <h2 class="card-header">{{ article|safe }}</h2>
+    <div class="card-body">
+      <p class="card-text text-muted">{{ article.author.name }} - {{ article.published|date:"d.m.Y" }}</p>
+    </div>
+    {% if article.was_published_today %}
+    <div class="card-footer text-center text-muted">new!</div>
+    {% endif %}
+  <a class="stretched-link" href="{% url 'news:article' article.id %}"></a>
+</div>

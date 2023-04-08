@@ -1,0 +1,27 @@
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+.main-color {
+    color: #527d3e
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.heading-word {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
